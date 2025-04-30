@@ -8,6 +8,8 @@ import { FaFacebookF, } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 function Signup() {
+    const backend_url = 'https://job-hunt-x0x7.onrender.com'
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',

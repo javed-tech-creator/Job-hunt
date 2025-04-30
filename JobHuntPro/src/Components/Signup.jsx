@@ -21,7 +21,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/jobhuntpro/user/signin', {
+            const response = await fetch(`${backend_url}/jobhuntpro/user/signin`, {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ function Signup() {
             });
           alert("Login successfull");
           setTimeout(()=>{
-            window.location.href="http://localhost:5173/login";
+            window.location.href="/login";
           },2000)
         }
         catch(err){

@@ -9,6 +9,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 
 function Login() {
+
+    const backend_url = 'https://job-hunt-x0x7.onrender.com'
+
     const [data,setData]=useState({
         email:'',
         password:''
@@ -24,7 +27,7 @@ function Login() {
     const submit = async (e)=>{
         e.preventDefault();
         try{
-       const responce = await fetch('http://localhost:3000/jobhuntpro/user/login', {
+       const responce = await fetch(`${backend_url}/jobhuntpro/user/login`, {
         method:'post',
         headers:{
             'Content-Type':'application/json',
